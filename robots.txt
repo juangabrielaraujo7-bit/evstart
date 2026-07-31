@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://evstarttech.com.br/sitemap.xml
