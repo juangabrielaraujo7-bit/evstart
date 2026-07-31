@@ -232,6 +232,7 @@ h3 {
   border-bottom: 1px solid var(--line);
 }
 .breadcrumb-bar span:last-child { color: var(--silver); }
+.breadcrumb-bar a:hover { color: var(--royal-glow); }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -247,6 +248,33 @@ h3 {
   gap: 40px;
   align-items: center;
 }
+.hero-announcement {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--silver);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 16px 6px 6px;
+  border-radius: 999px;
+  margin-bottom: 22px;
+  transition: border-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+.hero-announcement:hover { border-color: var(--royal-glow); color: var(--white); transform: translateY(-2px); }
+.hero-announcement-badge {
+  background: linear-gradient(135deg, var(--royal), var(--royal-dark));
+  color: var(--white);
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+.hero-announcement svg { width: 16px; height: 16px; color: var(--royal-glow); }
+
 .hero-sub {
   margin-top: 18px;
   font-size: 1.05rem;
@@ -927,8 +955,12 @@ input:focus, select:focus, textarea:focus {
   .hero-ctas .btn { width: 100%; }
 }
 
-/* Tablet / nav collapse threshold */
-@media (max-width: 860px) {
+@media (max-width: 480px) {
+  .hero-announcement { flex-wrap: wrap; border-radius: var(--radius-md); font-size: 0.8rem; }
+}
+
+/* Tablet / nav collapse threshold (raised to fit 9 nav items without wrapping) */
+@media (max-width: 1200px) {
   .main-nav {
     position: fixed;
     top: 72px; left: 0; right: 0;
@@ -938,7 +970,7 @@ input:focus, select:focus, textarea:focus {
     overflow: hidden;
     transition: max-height 0.3s ease;
   }
-  .main-nav.is-open { max-height: 420px; }
+  .main-nav.is-open { max-height: calc(100vh - 72px); overflow-y: auto; }
   .main-nav ul {
     flex-direction: column;
     gap: 0;
