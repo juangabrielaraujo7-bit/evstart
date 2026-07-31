@@ -58,6 +58,12 @@
       { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
     );
     revealEls.forEach(function (el) { observer.observe(el); });
+
+    // Salvaguarda: se o observer nunca disparar (aba em segundo plano, navegador
+    // lento etc.), o conteúdo não pode ficar invisível para sempre.
+    setTimeout(function () {
+      revealEls.forEach(function (el) { el.classList.add("is-visible"); });
+    }, 1800);
   } else {
     revealEls.forEach(function (el) { el.classList.add("is-visible"); });
   }

@@ -959,6 +959,15 @@ input:focus, select:focus, textarea:focus {
   .hero-announcement { flex-wrap: wrap; border-radius: var(--radius-md); font-size: 0.8rem; }
 }
 
+/* Cabeçalho: em telas muito estreitas, a marca + rótulo do botão + hambúrguer
+   não cabem todos numa linha só — reduz para o essencial. */
+@media (max-width: 480px) {
+  .brand-text small { display: none; }
+  .header-actions .btn-label { display: none; }
+  .header-actions .btn-primary.btn-sm { padding: 10px; }
+  .header-inner { gap: 10px; }
+}
+
 /* Tablet / nav collapse threshold (raised to fit 9 nav items without wrapping) */
 @media (max-width: 1200px) {
   .main-nav {
