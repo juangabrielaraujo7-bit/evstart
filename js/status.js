@@ -70,7 +70,12 @@
     if (submitBtn) submitBtn.disabled = true;
     setState("loading", "Consultando...");
 
-    fetch(OS_CSV_URL, { cache: "no-store" })
+    // O Google Sheets mantém a exportação CSV publicada em cache por alguns
+    // minutos. Um parâmetro único por consulta evita receber uma versão
+    // desatualizada quando o status acabou de ser alterado na planilha.
+    var freshUrl = OS_CSV_URL + (OS_CSV_URL.indexOf("?") > -1 ? "&" : "?") + "cachebust=" + Date.now();
+
+    fetch(freshUrl, { cache: "no-store" })
       .then(function (response) {
         if (!response.ok) throw new Error("network-error");
         return response.text();
