@@ -987,7 +987,7 @@ input:focus, select:focus, textarea:focus {
 
 /* Desktop */
 @media (min-width: 1024px) {
-  .hero-grid { grid-template-columns: 0.95fr 1.15fr; gap: 60px; }
+  .hero-grid { grid-template-columns: 0.85fr 1.3fr; gap: 48px; }
   .grid-4 { grid-template-columns: repeat(4, 1fr); }
   .grid-3 { grid-template-columns: repeat(3, 1fr); }
   .steps { grid-template-columns: repeat(4, 1fr); }
@@ -998,4 +998,9 @@ input:focus, select:focus, textarea:focus {
 
 @media (min-width: 1280px) {
   .container { padding: 0 32px; }
+  .hero .container { max-width: 1440px; }
+}
+
+@media (min-width: 1600px) {
+  .hero .container { max-width: 1680px; }
 }
