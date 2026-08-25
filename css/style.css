@@ -236,7 +236,7 @@ h3 {
 
 /* ---------- Hero ---------- */
 .hero {
-  padding: 64px 0 80px;
+  padding: 136px 0 80px;
   background:
     radial-gradient(circle at 85% 0%, rgba(43, 71, 255, 0.25), transparent 55%),
     radial-gradient(circle at 0% 100%, rgba(43, 71, 255, 0.12), transparent 45%),
@@ -432,22 +432,6 @@ h3 {
 }
 .split p { margin-top: 14px; font-size: 0.98rem; }
 .split .btn { margin-top: 22px; }
-
-.brand-highlight {
-  display: grid;
-  gap: 14px;
-}
-.brand-highlight li {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  padding: 18px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.brand-highlight strong { color: var(--white); }
-.brand-highlight span { font-size: 0.85rem; color: var(--silver-dim); }
 
 /* ---------- Testimonials ---------- */
 .testimonial {
