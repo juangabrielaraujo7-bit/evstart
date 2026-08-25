@@ -445,6 +445,26 @@ h3 {
 .testimonial p { font-style: italic; color: var(--silver); }
 .testimonial footer { margin-top: 16px; font-size: 0.85rem; color: var(--silver-dim); font-style: normal; }
 
+/* ---------- Sobre ---------- */
+.about-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.about-gallery img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 900 / 1600;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.about-gallery img:hover {
+  transform: translateY(-4px);
+  border-color: rgba(77, 104, 255, 0.5);
+}
+
 /* ---------- Location ---------- */
 .info-list { display: grid; gap: 16px; margin: 26px 0; }
 .info-list dt { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--royal-glow); font-weight: 700; }
@@ -975,6 +995,7 @@ input:focus, select:focus, textarea:focus {
 
 /* Tablets */
 @media (min-width: 640px) {
+  .about-gallery { grid-template-columns: repeat(4, 1fr); }
   .grid-4 { grid-template-columns: repeat(3, 1fr); }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
   .steps { grid-template-columns: repeat(2, 1fr); }
