@@ -297,7 +297,7 @@ h3 {
 .hero-trust li { display: flex; align-items: center; gap: 10px; }
 .hero-trust svg { width: 18px; height: 18px; color: var(--royal-glow); fill: currentColor; }
 
-.hero-media { position: relative; }
+.hero-media-inner { position: relative; width: 100%; }
 .hero-media img {
   border-radius: var(--radius-lg);
   border: 1px solid var(--line);
@@ -988,7 +988,15 @@ input:focus, select:focus, textarea:focus {
 /* Desktop */
 @media (min-width: 1024px) {
   .hero-grid { grid-template-columns: 1.05fr 0.95fr; gap: 60px; }
-  .hero-media img { aspect-ratio: 4 / 5; }
+  .hero-media {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+  }
   .grid-4 { grid-template-columns: repeat(4, 1fr); }
   .grid-3 { grid-template-columns: repeat(3, 1fr); }
   .steps { grid-template-columns: repeat(4, 1fr); }
