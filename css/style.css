@@ -988,6 +988,7 @@ input:focus, select:focus, textarea:focus {
 /* Desktop */
 @media (min-width: 1024px) {
   .hero-grid { grid-template-columns: 1.05fr 0.95fr; gap: 60px; }
+  .hero-media img { aspect-ratio: 4 / 5; }
   .grid-4 { grid-template-columns: repeat(4, 1fr); }
   .grid-3 { grid-template-columns: repeat(3, 1fr); }
   .steps { grid-template-columns: repeat(4, 1fr); }
