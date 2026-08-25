@@ -300,12 +300,12 @@ h3 {
 .hero-media-inner { position: relative; width: 100%; }
 .hero-media img {
   border-radius: var(--radius-lg);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow-lg);
   width: 100%;
   height: auto;
   aspect-ratio: 1400 / 788;
   object-fit: cover;
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
 .hero-media-badge {
   position: absolute;
@@ -987,16 +987,7 @@ input:focus, select:focus, textarea:focus {
 
 /* Desktop */
 @media (min-width: 1024px) {
-  .hero-grid { grid-template-columns: 1.05fr 0.95fr; gap: 60px; }
-  .hero-media {
-    align-self: stretch;
-    display: flex;
-    align-items: center;
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: var(--radius-lg);
-    padding: 20px;
-  }
+  .hero-grid { grid-template-columns: 0.95fr 1.15fr; gap: 60px; }
   .grid-4 { grid-template-columns: repeat(4, 1fr); }
   .grid-3 { grid-template-columns: repeat(3, 1fr); }
   .steps { grid-template-columns: repeat(4, 1fr); }
