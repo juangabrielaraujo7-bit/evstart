@@ -276,17 +276,6 @@ h3 {
   gap: 14px;
   margin-top: 30px;
 }
-.hero-trust {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 30px;
-  font-size: 0.92rem;
-  color: var(--silver);
-}
-.hero-trust li { display: flex; align-items: center; gap: 10px; }
-.hero-trust svg { width: 18px; height: 18px; color: var(--royal-glow); fill: currentColor; }
-
 .hero-media-inner { position: relative; width: 100%; }
 .hero-media img {
   border-radius: var(--radius-lg);
@@ -371,7 +360,6 @@ h3 {
 .other-services-form {
   display: flex;
   flex-direction: column;
-  flex: 1;
   gap: 10px;
   margin-top: 10px;
 }
@@ -406,6 +394,16 @@ h3 {
 .brand-card h3 { font-size: 1rem; margin-bottom: 0; }
 .brand-card-desc { margin-top: 8px; font-size: 0.82rem; color: var(--silver-dim); }
 .brand-card .card-cta { margin-top: auto; padding-top: 14px; }
+.brand-card-text {
+  justify-content: center;
+  text-align: center;
+}
+.other-services-form {
+  justify-content: center;
+  align-items: center;
+}
+.other-services-form select { width: 100%; text-align: center; text-align-last: center; }
+.other-services-form .card-cta { margin-top: 12px; padding-top: 0; }
 
 /* ---------- Features ---------- */
 .feature {
