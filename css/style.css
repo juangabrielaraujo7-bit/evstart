@@ -359,17 +359,23 @@ h3 {
 .card-icon svg { width: 20px; height: 20px; }
 .card h3 { margin-bottom: 0; font-size: 0.92rem; }
 .card-cta {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 5px;
-  margin-top: 10px;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 12px;
+  width: 100%;
+  padding: 9px 10px;
+  border-radius: 999px;
+  background: #25d366;
+  color: var(--white);
   font-size: 0.78rem;
   font-weight: 700;
-  color: var(--royal-glow);
-  transition: color 0.2s ease;
+  box-shadow: 0 8px 18px -6px rgba(37, 211, 102, 0.55);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
-.card-cta svg { width: 14px; height: 14px; fill: currentColor; }
-.card-cta:hover { color: var(--white); }
+.card-cta svg { width: 15px; height: 15px; fill: currentColor; flex-shrink: 0; }
+.card-cta:hover { transform: translateY(-2px); filter: brightness(1.08); box-shadow: 0 10px 22px -6px rgba(37, 211, 102, 0.7); }
 
 /* ---------- Brand list ---------- */
 .brand-list {
