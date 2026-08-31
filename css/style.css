@@ -103,16 +103,6 @@ h3 {
 }
 .text-accent { color: var(--royal-glow); }
 
-.eyebrow {
-  display: inline-block;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--royal-glow);
-  margin: 0 0 12px;
-}
-
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-flex;
