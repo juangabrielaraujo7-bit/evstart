@@ -367,6 +367,16 @@ h3 {
 .card-cta svg { width: 15px; height: 15px; fill: currentColor; flex-shrink: 0; }
 .card-cta:hover { transform: translateY(-2px); filter: brightness(1.08); box-shadow: 0 10px 22px -6px rgba(37, 211, 102, 0.7); }
 
+/* ---------- Outros serviços ---------- */
+.other-services { margin-top: 40px; max-width: 640px; }
+.other-services h3 { margin-bottom: 14px; }
+.other-services-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.other-services-form .field { flex: 1; }
+
 /* ---------- Brand cards ---------- */
 .brand-card {
   background: var(--panel);
@@ -1014,6 +1024,7 @@ input:focus, select:focus, textarea:focus {
 
 /* Tablets */
 @media (min-width: 640px) {
+  .other-services-form { flex-direction: row; align-items: flex-start; }
   .about-gallery { grid-template-columns: repeat(4, 1fr); }
   .grid-4 { grid-template-columns: repeat(3, 1fr); }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
