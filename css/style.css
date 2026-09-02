@@ -245,14 +245,16 @@ h3 {
 
 .breadcrumb-bar {
   margin-top: 72px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  font-size: 0.78rem;
-  color: var(--silver-dim);
+  padding: 14px 0;
+  font-size: 0.85rem;
+  background: var(--black-soft);
   border-bottom: 1px solid var(--line);
 }
-.breadcrumb-bar span:last-child { color: var(--silver); }
+.breadcrumb-bar .container { display: flex; align-items: center; flex-wrap: wrap; }
+.breadcrumb-bar a { color: var(--silver-dim); font-weight: 600; transition: color 0.2s ease; }
 .breadcrumb-bar a:hover { color: var(--royal-glow); }
+.breadcrumb-bar span:not(:last-child) { color: var(--line); padding: 0 6px; font-weight: 700; }
+.breadcrumb-bar span:last-child { color: var(--white); font-weight: 700; }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -333,7 +335,7 @@ h3 {
 .hero-media-badge span { font-size: 0.72rem; opacity: 0.9; }
 
 /* ---------- Páginas de serviço ---------- */
-.page-hero { padding: 116px 0 72px; }
+.page-hero { padding: 48px 0 64px; }
 .page-hero .hero-sub { max-width: 60ch; }
 
 /* Selo da loja no topo do hero */
