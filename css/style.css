@@ -464,6 +464,8 @@ h3 {
   margin-top: 3px;
   color: var(--royal-glow);
 }
+.check-list a { color: var(--royal-glow); font-weight: 700; }
+.check-list a:hover { color: var(--white); }
 
 .model-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
 .model-tags span {
