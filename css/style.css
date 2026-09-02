@@ -188,6 +188,36 @@ h3 {
 }
 .main-nav a:hover::after { right: 0; }
 
+/* ---------- Dropdown do menu (páginas de serviço dedicadas) ---------- */
+.has-dropdown { position: relative; }
+.main-nav .dropdown {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 240px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 8px;
+  box-shadow: var(--shadow-lg);
+  z-index: 50;
+}
+.main-nav .has-dropdown:hover .dropdown,
+.main-nav .has-dropdown:focus-within .dropdown {
+  display: flex;
+}
+.main-nav .dropdown li a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+.main-nav .dropdown li a:hover { background: rgba(77, 104, 255, 0.14); color: var(--white); }
+.main-nav .dropdown li a::after { display: none; }
+
 .header-actions { display: flex; align-items: center; gap: 12px; }
 
 .nav-toggle {
@@ -1173,6 +1203,17 @@ input:focus, select:focus, textarea:focus {
   }
   .main-nav a { display: block; padding: 12px 0; border-bottom: 1px solid var(--line); }
   .nav-toggle { display: flex; }
+
+  .main-nav .dropdown {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    border: 0;
+    box-shadow: none;
+    padding: 0 0 8px 16px;
+    background: transparent;
+  }
+  .main-nav .dropdown li a { padding: 10px 0; border-bottom: 0; color: var(--silver-dim); font-size: 0.85rem; }
 }
 
 /* Tablets */
