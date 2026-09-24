@@ -43,28 +43,6 @@
     });
   }
 
-  // Revelação suave ao rolar a página
-  var revealEls = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window && revealEls.length) {
-    var observer = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
-    );
-    revealEls.forEach(function (el) { observer.observe(el); });
-
-    // Salvaguarda: se o observer nunca disparar (aba em segundo plano, navegador
-    // lento etc.), o conteúdo não pode ficar invisível para sempre.
-    setTimeout(function () {
-      revealEls.forEach(function (el) { el.classList.add("is-visible"); });
-    }, 1800);
-  } else {
-    revealEls.forEach(function (el) { el.classList.add("is-visible"); });
-  }
+  // A entrada do conteúdo é resolvida em CSS (ver "Entrada" em style.css).
+  // O conteúdo nasce visível, então não há observer nem salvaguarda a manter aqui.
 })();
